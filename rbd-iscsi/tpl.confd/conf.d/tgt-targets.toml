@@ -1,0 +1,10 @@
+[template]
+src   = "tgt-targets.conf"
+dest  = "/etc/tgt/targets.conf"
+uid = 0
+gid = 0
+mode  = "0644"
+keys = [
+  "/tgt",
+]
+reload_cmd = "/usr/sbin/tgt-admin -f --update ALL -c /etc/tgt/targets.conf"

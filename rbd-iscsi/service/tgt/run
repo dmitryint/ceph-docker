@@ -1,0 +1,12 @@
+#!/bin/bash
+
+CONFIG=/etc/tgt/targets.conf
+
+command /usr/sbin/tgtd -f &
+sleep 1
+/usr/sbin/tgtadm --op update --mode sys --name State -v offline
+until [ -f ${CONFIG} ]; do sleep 1; done
+/usr/sbin/tgt-admin -e -c ${CONFIG}
+/usr/sbin/tgtadm --op update --mode sys --name State -v ready
+
+wait

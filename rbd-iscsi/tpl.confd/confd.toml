@@ -1,0 +1,5 @@
+[confd]
+confdir  = "/tpl.confd"
+interval = 5
+prefix   = "/"
+quiet = true
