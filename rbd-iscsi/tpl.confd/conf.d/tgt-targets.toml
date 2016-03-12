@@ -7,4 +7,4 @@ mode  = "0644"
 keys = [
   "/tgt",
 ]
-reload_cmd = "/usr/sbin/tgt-admin -f --update ALL -c /etc/tgt/targets.conf"
+reload_cmd = "/usr/sbin/tgt-admin --update ALL -c /etc/tgt/targets.conf"
